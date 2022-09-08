@@ -151,7 +151,6 @@ context('My First Test', () => {
   })
 
   it('types into an email field', () => {
-
     cy.findByPlaceholderText('Email')
             .type('test@email.com')
 
@@ -176,7 +175,6 @@ context('My First Test', () => {
   })
 
   it('should not have an active class on inactive pages', () => {
-
     cy.get('.dropdown-menu')
             .find('li')
             .first()
@@ -196,14 +194,12 @@ context('My First Test', () => {
   })
 
   it('lets you type in an input field', () => {
-
     cy.findByPlaceholderText('Email')
             .type('Test')
             .should('have.value', 'Test')
   })
 
   it('lets you clear an input field', () => {
-
     cy.findByLabelText('Describe:')
             .type('Test description')
             .should('have.value', 'Test description')
