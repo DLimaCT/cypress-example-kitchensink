@@ -170,7 +170,6 @@ context('My First Test', () => {
   })
 
   it('shows an active class for the current page', () => {
-    cy.visit('/commands/actions')
 
     cy.get('.dropdown-menu')
             .find('li')
