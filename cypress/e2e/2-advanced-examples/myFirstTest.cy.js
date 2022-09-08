@@ -151,7 +151,6 @@ context('My First Test', () => {
   })
 
   it('types into an email field', () => {
-    cy.visit('/commands/actions')
 
     cy.findByPlaceholderText('Email')
             .type('test@email.com')
@@ -170,7 +169,6 @@ context('My First Test', () => {
   })
 
   it('shows an active class for the current page', () => {
-
     cy.get('.dropdown-menu')
             .find('li')
             .eq(2)
@@ -178,7 +176,6 @@ context('My First Test', () => {
   })
 
   it('should not have an active class on inactive pages', () => {
-    cy.visit('/commands/actions')
 
     cy.get('.dropdown-menu')
             .find('li')
@@ -199,7 +196,6 @@ context('My First Test', () => {
   })
 
   it('lets you type in an input field', () => {
-    cy.visit('/commands/actions')
 
     cy.findByPlaceholderText('Email')
             .type('Test')
@@ -207,7 +203,6 @@ context('My First Test', () => {
   })
 
   it('lets you clear an input field', () => {
-    cy.visit('/commands/actions')
 
     cy.findByLabelText('Describe:')
             .type('Test description')
@@ -217,7 +212,6 @@ context('My First Test', () => {
   })
 
   it('lets you check a checkbox', () => {
-    cy.visit('/commands/actions')
     cy.get('.action-checkboxes [type="checkbox"]')
             .eq(1)
             .check({ force: true })
